@@ -81,12 +81,6 @@
 				
 					<a class="github" target="_blank" href="https://github.com/stttjmmm" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
-		        
 					<a class="mail" target="_blank" href="/993987665@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
@@ -123,12 +117,6 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/stttjmmm" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 						<a class="mail" target="_blank" href="/993987665@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -177,6 +165,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         
+
       
 
       
@@ -294,6 +283,22 @@
 
   
 
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://example.com/resources/index.html",
+  owner: 'stttjmmm',
+  repo: 'blog_gitment',
+  oauth: {
+    client_id: '76e589541408cc972158',
+    client_secret: '90103e7227efb5f2d5bd738349dea5822750a55a',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
