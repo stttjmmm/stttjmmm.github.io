@@ -146,6 +146,100 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="time line-Webots运行报错" class="article article-type-time line  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/07/04/Webots%E8%BF%90%E8%A1%8C%E6%8A%A5%E9%94%99/">Webots报错ctypes.ArgumentError解决</a>
+    </h1>
+  
+
+        
+        <a href="/2023/07/04/Webots%E8%BF%90%E8%A1%8C%E6%8A%A5%E9%94%99/" class="archive-article-date">
+  	<time datetime="2023-07-04T08:47:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-07-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="起因">1. 起因</h2>
+<p>在用课余时间学习Webots的时候，偶然间在B在是看到了这样一个用Webots进行六轴机械臂仿真的视频，<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV17L4y1w7HS/?spm_id_from=333.999.0.0&amp;vd_source=6770aecc3135fdf7c5c614af3da86ab3">全程干货【六轴机械臂正逆解计算及仿真示例】</a>，而且开源了工程文件，于是愉快地下文件下来准备学习一下，结果发现有不少坑······</p>
+<h2 id="环境适配">2. 环境适配</h2>
+<ul>
+<li><h3 id="包安装">包安装</h3></li>
+</ul>
+<p>因为是用Webots不久，要安装一些相应的python包，如python—can，机械臂工程文件里包含的protobot-python-api等等。</p>
+<p>参考： <a target="_blank" rel="noopener" href="https://blog.csdn.net/thenorther/article/details/104376561">使用豆瓣源pip安装包</a>， <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/350015032">Python 遭遇 ProxyError 问题记录</a></p>
+<ul>
+<li><h3 id="webots版本适配">Webots版本适配</h3></li>
+</ul>
+<p>还有，因为用的软件是Webots2023a，而工程文件的是Webots2022a，有些坐标系和文件需要修改。</p>
+<p>参考： <a target="_blank" rel="noopener" href="https://github.com/cyberbotics/webots/wiki/How-to-adapt-your-world-or-PROTO-to-Webots-R2022b">How to adapt your world or PROTO to Webots R2022b</a>， <a href="hhttps://blog.csdn.net/er123tig/article/details/126956511">Webots中如何使你的老版本创建的world和PROTO适配新版本软件R2022b</a></p>
+        
+          <a class="article-more-a" href="/2023/07/04/Webots%E8%BF%90%E8%A1%8C%E6%8A%A5%E9%94%99/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Webots</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/07/04/Webots%E8%BF%90%E8%A1%8C%E6%8A%A5%E9%94%99/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+  
     <article id="time line-ImpinJ阅读器连接电脑" class="article article-type-time line  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -171,23 +265,9 @@
 <h3 id="section-1">2.</h3>
 <p>控制面板→网络和 Internet→以太网→属性→Internet协议版本4(TCP/IPv4)→属性→将 PC本地的 IP 地址设为自动获取，包括自动获取 DNS</p>
 <p><img src="/2023/06/02/ImpinJ%E9%98%85%E8%AF%BB%E5%99%A8%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91/IP地址设置.png"></p>
-<h3 id="section-2">3.</h3>
-<p>控制面板→网络和 Internet→以太网→详细信息→查看读写器IP地址，如图为169.254.202.68</p>
-<p><img src="/2023/06/02/ImpinJ%E9%98%85%E8%AF%BB%E5%99%A8%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91/IP地址获取.png"></p>
-<h3 id="section-3">4.</h3>
-<p>下载PuTTY，按图中描述更改IP地址(SpeedwayR-XX-XX-XX，后六位为读写器上标签贴有的MAC地址)使更改IP地址与第三步查看的读写器IP地址前几位相同，本次例子为169.254.202.XX</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root</span><br><span class="line">impinj</span><br><span class="line">config network ip</span><br><span class="line">help</span><br><span class="line">static yourIP</span><br></pre></td></tr></table></figure>
-<p><img src="/2023/06/02/ImpinJ%E9%98%85%E8%AF%BB%E5%99%A8%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91/PuTTY.png"></p>
-<h3 id="section-4">5.</h3>
-<p>打开第一步安装好的ItemTest，DATA SOURCES打开对于读写器开关（天线和读写器的连接口不要拧太紧）</p>
-<p><img src="/2023/06/02/ImpinJ%E9%98%85%E8%AF%BB%E5%99%A8%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91/itemtest.png"></p>
-<h3 id="参考资料">6.参考资料</h3>
-<ul>
-<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43702620/article/details/118655308?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=hexo%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-7-118655308.142%5Ev88%5Econtrol_2,239%5Ev2%5Einsert_chatgpt&amp;spm=1018.2226.3001.4187">hexo搭建博客后图片无法显示的完美解决</a></p></li>
-<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/z952957407/article/details/111642548?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522168569921816800188545137%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=168569921816800188545137&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-18-111642548-null-null.142%5Ev88%5Econtrol_2,239%5Ev2%5Einsert_chatgpt&amp;utm_term=hexo%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA&amp;spm=1018.2226.3001.4187">解决：hexo+github本地和线上图片不显示问题</a></p></li>
-<li><p><a target="_blank" rel="noopener" href="https://www.impinj.com/">ImpinJ官网</a></p></li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2023/06/02/ImpinJ%E9%98%85%E8%AF%BB%E5%99%A8%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91/#more">more >></a>
+        
       
 
       
@@ -571,6 +651,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">RFID</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Webots</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
             
             <div class="clearfix"></div>

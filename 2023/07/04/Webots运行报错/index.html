@@ -6,15 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: RFID | SiTu&#39;s blog👋</title>
+  <title>Webots报错ctypes.ArgumentError解决 | SiTu&#39;s blog👋</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="SiTu&#39;s blog👋">
-<meta property="og:url" content="http://example.com/tags/RFID/index.html">
+  <meta name="description" content="1. 起因 在用课余时间学习Webots的时候，偶然间在B在是看到了这样一个用Webots进行六轴机械臂仿真的视频，全程干货【六轴机械臂正逆解计算及仿真示例】，而且开源了工程文件，于是愉快地下文件下来准备学习一下，结果发现有不少坑······ 2. 环境适配  包安装  因为是用Webots不久，要安装一些相应的python包，如python—can，机械臂工程文件里包含的protob">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Webots报错ctypes.ArgumentError解决">
+<meta property="og:url" content="http://example.com/2023/07/04/Webots%E8%BF%90%E8%A1%8C%E6%8A%A5%E9%94%99/index.html">
 <meta property="og:site_name" content="SiTu&#39;s blog👋">
+<meta property="og:description" content="1. 起因 在用课余时间学习Webots的时候，偶然间在B在是看到了这样一个用Webots进行六轴机械臂仿真的视频，全程干货【六轴机械臂正逆解计算及仿真示例】，而且开源了工程文件，于是愉快地下文件下来准备学习一下，结果发现有不少坑······ 2. 环境适配  包安装  因为是用Webots不久，要安装一些相应的python包，如python—can，机械臂工程文件里包含的protob">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/07/04/Webots%E8%BF%90%E8%A1%8C%E6%8A%A5%E9%94%99/%E8%BF%90%E8%A1%8C%E6%8A%A5%E9%94%99.png">
+<meta property="og:image" content="http://example.com/2023/07/04/Webots%E8%BF%90%E8%A1%8C%E6%8A%A5%E9%94%99/%E9%97%AE%E9%A2%98%E4%BD%8D%E7%BD%AE.png">
+<meta property="og:image" content="http://example.com/2023/07/04/Webots%E8%BF%90%E8%A1%8C%E6%8A%A5%E9%94%99/%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C.png">
+<meta property="article:published_time" content="2023-07-04T08:47:38.000Z">
+<meta property="article:modified_time" content="2023-07-04T11:21:25.261Z">
 <meta property="article:author" content="SiTu">
+<meta property="article:tag" content="Webots">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/07/04/Webots%E8%BF%90%E8%A1%8C%E6%8A%A5%E9%94%99/%E8%BF%90%E8%A1%8C%E6%8A%A5%E9%94%99.png">
   
     <link rel="alternative" href="/atom.xml" title="SiTu&#39;s blog👋" type="application/atom+xml">
   
@@ -144,64 +154,227 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="time line-Webots运行报错" class="article article-type-time line " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-time line">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/06/02/ImpinJ%E9%98%85%E8%AF%BB%E5%99%A8%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91/" class="archive-article-date">
-  	<time datetime="2023-06-02T09:21:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-06-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/06/02/ImpinJ%E9%98%85%E8%AF%BB%E5%99%A8%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91/">ImpinJ阅读器连接电脑</a>
+    <h1 class="article-title" itemprop="name">
+      Webots报错ctypes.ArgumentError解决
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2023/07/04/Webots%E8%BF%90%E8%A1%8C%E6%8A%A5%E9%94%99/" class="archive-article-date">
+  	<time datetime="2023-07-04T08:47:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-07-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="起因">1. 起因</h2>
+<p>在用课余时间学习Webots的时候，偶然间在B在是看到了这样一个用Webots进行六轴机械臂仿真的视频，<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV17L4y1w7HS/?spm_id_from=333.999.0.0&amp;vd_source=6770aecc3135fdf7c5c614af3da86ab3">全程干货【六轴机械臂正逆解计算及仿真示例】</a>，而且开源了工程文件，于是愉快地下文件下来准备学习一下，结果发现有不少坑······</p>
+<h2 id="环境适配">2. 环境适配</h2>
+<ul>
+<li><h3 id="包安装">包安装</h3></li>
+</ul>
+<p>因为是用Webots不久，要安装一些相应的python包，如python—can，机械臂工程文件里包含的protobot-python-api等等。</p>
+<p>参考： <a target="_blank" rel="noopener" href="https://blog.csdn.net/thenorther/article/details/104376561">使用豆瓣源pip安装包</a>， <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/350015032">Python 遭遇 ProxyError 问题记录</a></p>
+<ul>
+<li><h3 id="webots版本适配">Webots版本适配</h3></li>
+</ul>
+<p>还有，因为用的软件是Webots2023a，而工程文件的是Webots2022a，有些坐标系和文件需要修改。</p>
+<p>参考： <a target="_blank" rel="noopener" href="https://github.com/cyberbotics/webots/wiki/How-to-adapt-your-world-or-PROTO-to-Webots-R2022b">How to adapt your world or PROTO to Webots R2022b</a>， <a href="hhttps://blog.csdn.net/er123tig/article/details/126956511">Webots中如何使你的老版本创建的world和PROTO适配新版本软件R2022b</a></p>
+<span id="more"></span>
+<h2 id="运行">3. 运行</h2>
+<ul>
+<li><h3 id="报错">报错</h3></li>
+</ul>
+<p>在做好这些先前的准备工作后，以为可以愉快的跑代码学习了，但是在运行工程文件时还是报错了。</p>
+<p><img src="/2023/07/04/Webots%E8%BF%90%E8%A1%8C%E6%8A%A5%E9%94%99/运行报错.png"></p>
+<p>一开始以为是我在第二步的包安装或版本适配没有弄好（甩锅），在反复检查后排除了这个原因。然后有以为是开源的工程文件本身有错（再甩锅），然后在检查了里面的程序后发现也没问题······</p>
+<ul>
+<li><h3 id="错误定位">错误定位</h3></li>
+</ul>
+<p>（冷静分析）最后根据报错内容里面的路径定位，发现问题出在 <code>webots\Webots\lib\controller\python\controller\motor.py</code> 这个文件里。</p>
+<p>然后根据报错信息 <code>ctypes.ArgumentError: argument 1: class 'TypeError'&gt;: Don't know how to convert parameter 1WARNING:“arm_controller”控制器退出,状态:1。</code> 发现问题出在python的ctypes库调用c/c++库上面。</p>
+<p>思考：Webots上面的python实现是通过gcc调用c/c++代码实现的。整体过程是通过gcc把c/c++代码编译成.so库，然后在python代码中加载.so并调用对应的方法，调用过程是通过ctypes来完成。然后Webots的python调用代码出现了问题。</p>
+<p>参考： <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41748900/article/details/104060988?spm=1001.2101.3001.6650.4&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-4-104060988-blog-89566012.235%5Ev38%5Epc_relevant_yljh&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-4-104060988-blog-89566012.235%5Ev38%5Epc_relevant_yljh">ctypes.ArgumentError: argument 2: type 'exceptions.TypeError': Don't know how to convert parameter</a>，<a target="_blank" rel="noopener" href="https://blog.csdn.net/BigBoySunshine/article/details/89566012">python调用c/c++代码以及解决ctypes.ArgumentError: argument 1: class 'TypeError': Don't know how to convert</a></p>
+<ul>
+<li><h3 id="解决">解决</h3></li>
+</ul>
+<p>找到 <code>motor.py</code> 里报错的地方，对比上面force，torque和acceleration的函数定义部分，可以发现，在219行的acceleration后面与上两个的结果有所不同，问题就出现在了这里！！！</p>
+<p><img src="/2023/07/04/Webots%E8%BF%90%E8%A1%8C%E6%8A%A5%E9%94%99/问题位置.png"></p>
+<p>将219行按上面的结构修改</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#修改前</span></span><br><span class="line">wb.wb_motor_set_acceleration(acceleration)</span><br><span class="line"></span><br><span class="line"><span class="comment">#修改后</span></span><br><span class="line">wb.wb_motor_set_acceleration(self._tag, ctypes.c_double(acceleration))</span><br></pre></td></tr></table></figure>
+<p>问题解决！文件正常运行（撒花）~</p>
+<p><img src="/2023/07/04/Webots%E8%BF%90%E8%A1%8C%E6%8A%A5%E9%94%99/正常运行.png"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Impinj</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Webots</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">RFID</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/07/04/Webots%E8%BF%90%E8%A1%8C%E6%8A%A5%E9%94%99/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2023/06/02/ImpinJ%E9%98%85%E8%AF%BB%E5%99%A8%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ImpinJ阅读器连接电脑</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+
+  <!-- 《utteranc评论：基于github issue的评论系统 -->
+  
+    <section id="comments" class="comments">
+      <style>
+        .utterances{max-width: 100%;}
+      </style>
+        <script src="https://utteranc.es/client.js"
+                repo="stttjmmm/stttjmmm.github.io"
+                issue-term="title"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
+  </section>
+  
+  <!-- utteranc评论》 -->
+
+
+
 
 
           </div>
@@ -224,9 +397,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
